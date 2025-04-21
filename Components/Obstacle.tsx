@@ -13,6 +13,7 @@ const Obstacle = ({ x, type }: { x: number; type: keyof typeof obstacleMap }) =>
       className="absolute top-[40rem] obstacle"
       style={{
         transform: `translateX(${x}px)`,
+        top: "730px",
         transition: "transform 0.05s linear",
       }}
     >

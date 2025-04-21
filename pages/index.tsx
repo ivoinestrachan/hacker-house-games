@@ -12,7 +12,7 @@ const Index = () => {
   const [gameOver, setGameOver] = useState(false);
   const [obstacles, setObstacles] = useState<{ x: number; type: "garbage" | "bricks" }[]>([]);
   const [obstacleSpeed, setObstacleSpeed] = useState(4);
-  const [spawnRate, setSpawnRate] = useState(0.005); // Reduced spawn rate for more space between obstacles
+  const [spawnRate, setSpawnRate] = useState(0.005); 
   
   const groundOffsetRef = useRef(0);
   const backgroundOffsetRef = useRef(0);
@@ -23,10 +23,10 @@ const Index = () => {
   const jumpRef = useRef<NodeJS.Timeout | null>(null);
   const animationRef = useRef<number | null>(null);
   const gameLoopRef = useRef<number | null>(null);
-  const lastObstacleTimeRef = useRef(0); // Track when the last obstacle was created
+  const lastObstacleTimeRef = useRef(0); 
 
-  const groundWidth = 5000;
-  const minObstacleSpacing = 500; // Minimum pixel spacing between obstacles
+  const groundWidth = 10000;
+  const minObstacleSpacing = 800; 
 
   const handleJump = () => {
     if (gameOver) {
@@ -48,12 +48,10 @@ const Index = () => {
     jumpRef.current = setInterval(() => {
       setJumpHeight(height);
       if (up) {
-        // Going up at normal speed
         height += 5;
         if (height >= 210) up = false; 
       } else {
-        // Coming down faster (8px instead of 5px per frame)
-        height -= 8;
+        height -= 10;
         if (height <= 0) {
           height = 0;
           setJumpHeight(0);
@@ -124,10 +122,10 @@ const Index = () => {
         const moved = prev.map((obs) => ({ ...obs, x: obs.x - obstacleSpeed }));
         const filtered = moved.filter((obs) => obs.x > -100);
         
-        // Check if enough time has passed since the last obstacle and if we pass the random chance
+  
         const enoughSpacing = filtered.length === 0 || 
                              filtered.every(obs => obs.x < window.innerWidth - minObstacleSpacing);
-        const timeElapsed = currentTime - lastObstacleTimeRef.current > 1000; // At least 1 second between spawns
+        const timeElapsed = currentTime - lastObstacleTimeRef.current > 1000; 
         
         if (enoughSpacing && timeElapsed && Math.random() < spawnRate) {
           const newType = Math.random() > 0.5 ? "garbage" : "bricks";
@@ -144,7 +142,6 @@ const Index = () => {
         setObstacleSpeed((prev) => prev + 0.1);
       }
 
-      // Keep spawn rate lower to maintain spacing
       if (spawnRate > 0.001) {
         setSpawnRate((prev) => prev - 0.0001);
       }
@@ -212,7 +209,7 @@ const Index = () => {
 
       <div
         ref={groundElementRef}
-        className="absolute top-[42rem] h-[3rem] bg-black"
+        className="absolute top-[46.1rem] h-[3rem] bg-black"
         style={{
           width: `${groundWidth * 2}px`,
           transform: `translateX(0px)`,
@@ -223,21 +220,23 @@ const Index = () => {
         ref={groundLinesRef}
         className="absolute top-[25rem] h-[8rem] flex w-full"
         style={{
-          width: `${groundWidth * 2}px`,
+          width: `${groundWidth * 3}px`,
           transform: `translateX(0px)`,
         }}
       >
         {Array.from({ length: (groundWidth / 50) * 1 }).map((_, i) => (
           <div
             key={i}
-            className="h-[2px] ml-5 w-[30px] relative mt-[18.5rem] bg-white"
+            className="h-[2px] ml-5 w-[30px] relative mt-[22.5rem] bg-white"
           />
+          
         ))}
       </div>
+      
 
       <div
         ref={characterRef}
-        className="absolute top-[39rem] left-10"
+        className="absolute top-[44rem] left-10"
         style={{
           transform: `translateY(-${jumpHeight}px)`,
           transition: "transform 0.05s",
