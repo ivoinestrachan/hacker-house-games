@@ -50,7 +50,7 @@ const Index = () => {
       if (up) {
         // Going up at normal speed
         height += 5;
-        if (height >= 180) up = false; 
+        if (height >= 210) up = false; 
       } else {
         // Coming down faster (8px instead of 5px per frame)
         height -= 8;
