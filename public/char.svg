@@ -1,0 +1,32 @@
+<svg width="155" height="290" viewBox="0 0 155 290" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="54" y="69" width="43" height="50" fill="#AA671B"/>
+<rect x="32" y="218" width="43" height="66" fill="#AA671B"/>
+<rect x="80" y="218" width="43" height="66" fill="#AA671B"/>
+<path d="M123 119H135C146.046 119 155 127.954 155 139V195H123V119Z" fill="#AA671B"/>
+<path d="M0 139C0 127.954 8.95431 119 20 119H32V195H0V139Z" fill="#AA671B"/>
+<path d="M97 73C97 75.2091 95.2091 77 93 77H58C55.7909 77 54 75.2091 54 73V62C54 57.0294 58.0294 53 63 53H88C92.9706 53 97 57.0294 97 62V73Z" fill="black"/>
+<rect x="80" y="272" width="43" height="12" fill="black"/>
+<rect x="80" y="278" width="43" height="12" fill="white"/>
+<rect x="32" y="272" width="43" height="12" fill="black"/>
+<rect y="183" width="43" height="12" fill="black"/>
+<rect x="112" y="183" width="43" height="12" fill="black"/>
+<rect x="32" y="119" width="91" height="99" fill="#AA671B"/>
+<rect x="32" y="131" width="91" height="87" fill="#DC2923"/>
+<rect x="32" y="119" width="22" height="87" fill="#DC2923"/>
+<rect x="32" y="155" width="43" height="87" fill="#DC2923"/>
+<rect x="80" y="155" width="43" height="87" fill="#DC2923"/>
+<rect x="97" y="119" width="26" height="87" fill="#DC2923"/>
+<rect x="32" y="278" width="43" height="12" fill="white"/>
+<rect x="32" y="230" width="43" height="12" fill="white"/>
+<rect x="80" y="230" width="43" height="12" fill="white"/>
+<rect x="64" y="168" width="12" height="9" fill="white"/>
+<rect x="64" y="180" width="12" height="9" fill="white"/>
+<rect x="64" y="192" width="12" height="9" fill="white"/>
+<rect x="79" y="180" width="12" height="9" fill="white"/>
+<rect x="79" y="192" width="12" height="9" fill="white"/>
+<rect x="79" y="168" width="12" height="9" fill="white"/>
+<path d="M52 101H99V127C99 130.866 95.866 134 92 134H59C55.134 134 52 130.866 52 127V101Z" fill="black"/>
+<rect x="61" y="71" width="29" height="6" fill="#AA671B"/>
+<rect x="68" y="108" width="16" height="3" fill="#AA671B"/>
+<path d="M68.976 23.024H62.688L61.68 26H57.384L63.48 9.152H68.232L74.328 26H69.984L68.976 23.024ZM67.92 19.856L65.832 13.688L63.768 19.856H67.92ZM80.2873 22.832H85.6633V26H76.1833V9.152H80.2873V22.832ZM91.7248 9.152V26H87.6208V9.152H91.7248Z" fill="black"/>
+</svg>
